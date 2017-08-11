@@ -1,0 +1,11 @@
+extends ../layout
+
+block content
+  h1= data["name"]
+  p Located in
+  h2= data["location"]
+  
+  form(method="get", action='/hospitals/#{hospitalID}/edit')
+    input(type="submit" value="Edit Hospital Information")
+  form(method="post", action='/hospitals/#{hospitalID}/delete')
+    input(type="submit" value="Delete Hospital from Database")

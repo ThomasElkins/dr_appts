@@ -1,0 +1,15 @@
+extends ../layout
+
+block content
+  h1= data["name"]
+  p Age
+  h2= data["age"]
+  p Gender
+  h3= data["gender"]
+  p Height
+  h4= data["height"]
+  
+  form(method="get", action='/patients/#{patientID}/edit')
+    input(type="submit" value="Edit Patient Information")
+  form(method="post", action='/patients/#{patientID}/delete')
+    input(type="submit" value="Delete Patient from Database")

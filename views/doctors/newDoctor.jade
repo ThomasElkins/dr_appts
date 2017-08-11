@@ -1,0 +1,11 @@
+extends ../layout
+
+block content
+  h1= title
+  
+  form(method="post" action="/doctors/new")
+    input(type="text", name="name", placeholder="Name...")
+    input(type="number", name="age", placeholder="Age...")
+    input(type="text", name="gender", placeholder="Gender...")
+    input(type="number", name="hospitalID", placeholder="Hospital ID")
+    input(type="submit" method="post" value="Add Doctor")

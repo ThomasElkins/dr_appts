@@ -1,0 +1,10 @@
+extends ../layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  - for doctors in data
+    button
+      a(href='/doctors/#{doctors.id}') #{doctors["name"]}
+  form(method="get", action="/doctors/new")
+    input(type="submit" value="Add new Doctor")

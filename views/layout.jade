@@ -5,3 +5,11 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     block content
+    form(method="get", action="/patients")
+      input(type="submit" value="Patients Portal")
+    form(method="get", action="/doctors")
+      input(type="submit" value="Doctors Portal")
+    form(method="get", action="/hospitals")
+      input(type="submit" value="Hospitals Portal")
+    form(method="get", action="/appointments")
+      input(type="submit" value="Appointments Portal")

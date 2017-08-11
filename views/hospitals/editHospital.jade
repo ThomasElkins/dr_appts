@@ -1,0 +1,9 @@
+extends ../layout
+
+block content
+  h1= title
+  
+  form(method="post" action="/hospitals/#{hospitalID}/edit")
+    input(type="text", name="name", placeholder="Name...")
+    input(type="text", name="location", placeholder="Location...")
+    input(type="submit" method="post" value="Edit Hospital")
